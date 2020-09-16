@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Aloptrbl",
   "bugs": {
-    "url": "https://github.com/aloptrbl/aloptrbl/issues"
+    "url": "https://github.com/aloptrbl/issues"
   },
   "dependencies": {
     "gatsby": "^2.24.47",

@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/aloptrbl",
+  pathPrefix: "/",
   siteMetadata: {
     title: `🧑🏻‍💻 TIL`,
     author: {
@@ -7,7 +7,7 @@ module.exports = {
       summary: `a lazy developer who hates chocolate`,
     },
     description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
-    siteUrl: `https://aloptrbl.github.io/aloptrbl`,
+    siteUrl: `https://aloptrbl.github.io`,
     social: {
       twitter: `aloptrbl`,
       dribbble: `aloptrbl`,
