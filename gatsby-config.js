@@ -64,8 +64,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryz`,
-        short_name: `Ryz`,
+        name: `Aloptrbl`,
+        short_name: `Aloptrbl`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
