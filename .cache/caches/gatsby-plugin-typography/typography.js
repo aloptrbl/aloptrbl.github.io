@@ -1,1 +1,0 @@
-module.exports = require("/Users/aloptrbl/Desktop/aloptrbl.github.io/src/utils/typography")
