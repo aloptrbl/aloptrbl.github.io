@@ -27,17 +27,17 @@ image:
 
 ```js
 //Impure Function
-let number = 2
+let number = 2;
 function squareNumber() {
-  number = number * number
-  console.log(number)
-  return number
+  number = number * number;
+  console.log(number);
+  return number;
 }
 
 //Pure Function
 function squareNumber(number) {
-  number = number * number
-  return number
+  number = number * number;
+  return number;
 }
 ```
 
@@ -47,9 +47,9 @@ Pass into variable 🤝
 
 ```js
 var tripe = function triple(x) {
-  return x * 3
-}
-console.log(tripe(30))
+  return x * 3;
+};
+console.log(tripe(30));
 ```
 
 ### HIGHER ORDER FUNCTION
@@ -99,48 +99,49 @@ Var otherAnimals = animals.reject(isDog)
 
 ```js
 function sing(callback) {
-  console.log("lalala")
+  console.log("lalala");
   if (callback) {
-    callback()
+    callback();
   }
 }
 
 function meow() {
-  console.log("meow")
+  console.log("meow");
 }
 
 function setup() {
   sing(function () {
-    console.log("moew meow")
-  })
+    console.log("moew meow");
+  });
 }
 ```
 
 ##### Example #3
+
 ```js
 function multiply(factor) {
-  return function(x) {
-   return x * factor;
-  }
+  return function (x) {
+    return x * factor;
+  };
 }
 let doubler = multiply(2);
 let tripler = multiply(3);
-doubler(4)
+doubler(4);
 ```
 
 ### Arrow Function
+
 ```js
 //pure function
 Function sing() {
-return console.log('lalala'); 
+return console.log('lalala');
 }
 
 //arrow function
 Function multiply(factor) {
-Return x => x * factor 
+Return x => x * factor
 }
 
 Let doubler = multiply(2);
 Let tripler = multiply(3);
 ```
-

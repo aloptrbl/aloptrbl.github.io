@@ -17,12 +17,11 @@ image:
 ## Stateless Functional Component
 
 > It is component that are not using any kind of state, refs,or lifecycle methods.
->It is state-less & just a constant function that returns some data
->In simple words, stateless functional components are just functions that return JSX.
+> It is state-less & just a constant function that returns some data
+> In simple words, stateless functional components are just functions that return JSX.
 
 ## Pure Components
 
 > Usually, when a component get a new prop into it, React will re-render that component. But sometimes, a component get new props that haven't really changed. but React will still trigger a re-render.
 
 > Using Pure Component will help you prevent this wasted re-render
-

@@ -1,19 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { scale } from "../utils/typography"
+import React from "react";
+import { Link } from "gatsby";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import { scale } from "../utils/typography";
 import {
   AiOutlineGithub,
   AiFillTwitterCircle,
   AiFillDribbbleCircle,
-} from "react-icons/ai"
+} from "react-icons/ai";
 import { DiCss3, DiJavascript, DiReact, DiVue } from "react-icons/di";
 import { FiGitBranch, FiGlobe } from "react-icons/fi";
 import { RiVuejsLine, RiServerLine } from "react-icons/ri";
-import Footer from "./footer"
-import "./global.css"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import Footer from "./footer";
+import "./global.css";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -39,14 +39,14 @@ const Layout = ({ location, title, children }) => {
         }
       }
     }
-  `)
+  `);
 
   const toggle = (
     <ThemeToggler>
       {({ toggleTheme, theme }) => {
-        const isDarkMode = theme === "dark"
+        const isDarkMode = theme === "dark";
         if (theme == null) {
-          return null
+          return null;
         }
         return (
           <button
@@ -84,10 +84,10 @@ const Layout = ({ location, title, children }) => {
               </svg>
             )}
           </button>
-        )
+        );
       }}
     </ThemeToggler>
-  )
+  );
 
   const header = (
     <>
@@ -109,38 +109,51 @@ const Layout = ({ location, title, children }) => {
         </Link>
       </h2>
     </>
-  )
-
+  );
 
   const tags = (
     <>
-    <div className="tags-container">
-      <div className="tags">
-        <div><FiGitBranch className="skill-icon" /> Git</div>
-      </div>
-      <div className="tags">
-        <div><FiGlobe className="skill-icon" /> Web</div>
-      </div>
-      <div className="tags">
-        <div><DiCss3 className="skill-icon" /> CSS</div>
-      </div>
-      <div className="tags">
-        <div><DiJavascript className="skill-icon" /> JS</div>
-      </div>
-      <div className="tags">
-        <div><DiReact className="skill-icon" /> React</div>
-      </div>
-      <div className="tags">
-        <div><RiVuejsLine className="skill-icon" /> Vue</div>
-      </div>
-      <div className="tags">
-        <div><RiServerLine className="skill-icon" /> Etc.</div>
-      </div>
+      <div className="tags-container">
+        <div className="tags">
+          <div>
+            <FiGitBranch className="skill-icon" /> Git
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <FiGlobe className="skill-icon" /> Web
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <DiCss3 className="skill-icon" /> CSS
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <DiJavascript className="skill-icon" /> JS
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <DiReact className="skill-icon" /> React
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <RiVuejsLine className="skill-icon" /> Vue
+          </div>
+        </div>
+        <div className="tags">
+          <div>
+            <RiServerLine className="skill-icon" /> Etc.
+          </div>
+        </div>
       </div>
     </>
-  )
+  );
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
@@ -153,7 +166,12 @@ const Layout = ({ location, title, children }) => {
       <div className="sidebar">
         <div
           className=" p-4 flex flex-col transparent-bg"
-          style={{ minHeight: 20, marginLeft: 15, marginTop: 15, marginRight: 15}}
+          style={{
+            minHeight: 20,
+            marginLeft: 15,
+            marginTop: 15,
+            marginRight: 15,
+          }}
         >
           {header}
           <div>Today I learn</div>
@@ -174,7 +192,7 @@ const Layout = ({ location, title, children }) => {
               }}
               href={`https://github.com/${social.github}`}
             >
-            <AiOutlineGithub className="social-media-icon" />
+              <AiOutlineGithub className="social-media-icon" />
             </a>
             <a
               style={{
@@ -183,7 +201,7 @@ const Layout = ({ location, title, children }) => {
               }}
               href={`https://dribbble.com/${social.dribbble}`}
             >
-            <AiFillDribbbleCircle className="social-media-icon" />
+              <AiFillDribbbleCircle className="social-media-icon" />
             </a>
           </div>
           {tags}
@@ -195,7 +213,7 @@ const Layout = ({ location, title, children }) => {
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
