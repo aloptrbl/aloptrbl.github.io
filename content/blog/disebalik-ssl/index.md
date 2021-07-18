@@ -1,7 +1,7 @@
 ---
 title: Di Sebalik SSL 🔐
 date: "2021-02-01T11:12:00.284Z"
-description: "SSL (Secure Socket Layers) certificate merupakan satu file data/sijil yang wajib ada dalam sesuatu website. Salah satu tujuan utama adalah meningkatkan security ketika proses penghantaran data antara client & web server. SSL adalah main standard industri dan merupakan protocol keselamatan yang paling banyak digunakan pada laman web hari ini."
+description: "SSL (Secure Socket Layers) certificate merupakan satu file data/sijil yang wajib ada dalam sesuatu website. Salah satu tujuan utama adalah meningkatkan security ketika proses penghantaran data antara client & web server. SSL adalah standard utama industri dan merupakan protocol keselamatan yang paling banyak digunakan pada laman web hari ini."
 categories: [JS]
 comments: true
 image:
@@ -12,7 +12,7 @@ image:
 
 ## Apa itu SSL Certificate?
 
-SSL (Secure Socket Layers) certificate merupakan satu file data/sijil yang wajib ada dalam sesuatu website. Salah satu tujuan utama adalah meningkatkan security ketika proses penghantaran data antara client & web server. SSL adalah main standard industri dan merupakan protocol keselamatan yang paling banyak digunakan pada laman web hari ini. Kebiasaannya SSL Certificate akan mengandungi nama domain, nama syarikat,alamat,bandar,negeri, dan negara. Ia juga mempunyai tarikh tamat sijil dan butir butir pihak certificate provider.
+SSL (Secure Socket Layers) certificate merupakan satu file data/sijil yang wajib ada dalam sesuatu website. Salah satu tujuan utama adalah meningkatkan security ketika proses penghantaran data antara client & web server. SSL adalah standard utama industri dan merupakan protocol keselamatan yang paling banyak digunakan pada laman web hari ini. Kebiasaannya SSL Certificate akan mengandungi nama domain, nama syarikat,alamat,bandar,negeri, dan negara. Ia juga mempunyai tarikh tamat sijil dan butir butir pihak certificate provider.
 
 #### Fungsi SSL
 1. Encrypt maklumat sensetif seperti nombor kad kredit, maklumat bank akaun bank, dan kata laluan ketika melakukan online banking.
