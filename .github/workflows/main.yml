@@ -23,9 +23,6 @@ jobs:
       - name: Build and Export
         run: npm run build
 
-      - name: Start
-        run: npm run start
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
