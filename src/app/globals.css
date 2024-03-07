@@ -25,6 +25,15 @@ body {
 h1, h2 {
   font-weight: bold;
   font-size: x-large;
+  background: url('/strokes.png') no-repeat;
+  background-size: auto 60%;
+  background-position: bottom;
+  display: inline;
+}
+
+
+hr {
+  color: rgb(var(--foreground-rgb));
 }
 
 
