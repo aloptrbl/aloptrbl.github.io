@@ -11,7 +11,7 @@ export default function About() {
   return (
     <Layout>
 <h1>Introduction</h1>
-<hr className="bg-white"></hr>
+<hr></hr>
     <p>Hello, I am a mobile developer with over 4 years of experience. <br></br> I specialize in native mobile development, with a focus on Kotlin for Android and Swift & SwiftUI for iOS. My goal is to create applications that not only satisfy the end-users but also bring joy to fellow developers during the development process.</p>
 
     <h2>Skills</h2>
