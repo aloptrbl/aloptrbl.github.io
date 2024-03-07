@@ -7,7 +7,6 @@ import '../../app/globals.css'
 
 
 export default function About() {
-  const { theme, setTheme } = useTheme()
   return (
     <Layout>
 <h1>Introduction</h1>
@@ -17,10 +16,11 @@ export default function About() {
     <h2>Skills</h2>
     <hr></hr>
     <ul>
-        <li>Kotlin</li>
+        <li>Kotlin & Jetpack Compose</li>
         <li>Swift & SwiftUI</li>
         <li>React Native</li>
         <li>CakePHP, Node JS, React</li>
+        <li>MYSQL, GraphQL, Firebase</li>
     </ul>
     <br></br>
     <h2>Projects</h2>
@@ -33,6 +33,9 @@ export default function About() {
 
     <h3>Bplaz Rider App / Bplaz Merchant App</h3>
     <p>Bplaz is a mobile application that serves as a platform for roadside assistance and a marketplace. The Bplaz Merchant app is designed to help merchants monitor and manage their sales.</p>
+<br></br>
+    <h3>Wahdah App</h3>
+    <p> It’s designed for fleet management and has several features.</p>
 
 <h3>FASSPOS app (In flight app Air Asia)</h3>
 <p>an onboard retail solution for Air Asia, enabling crews to manage inventory, scan QR codes, and accept contactless payments.</p>
