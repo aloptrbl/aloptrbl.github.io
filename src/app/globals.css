@@ -33,12 +33,33 @@ h1, h2 {
 
 
 hr {
-  color: rgb(var(--foreground-rgb));
+  border-color: rgb(var(--foreground-rgb));
 }
 
 
 a {
   color: rgb(var(--foreground-rgb));
+}
+
+.card-bg {
+  background-color: rgb(var(--foreground-rgb));
+}
+
+.card-title {
+  color: rgb(var(--background-start-rgb));
+  font-weight: bold;
+}
+
+.card-subtitle {
+  color: rgb(var(--background-start-rgb));
+}
+
+.card-description {
+  color: rgb(var(--background-start-rgb));
+}
+
+.card-info {
+  color: rgb(var(--background-start-rgb));
 }
 
   .logo {

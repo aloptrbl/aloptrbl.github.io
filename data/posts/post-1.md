@@ -1,0 +1,29 @@
+---
+title: "Kotlin Extensions: Enhancing Classes"
+publishedAt: 2021-02-04
+image: 'articles/kotlin-extension.jpg'
+description: "Kotlin Extensions are a powerful feature in Kotlin that allows you to add new functions to existing classes without modifying their source code. These functions are called extension functions."
+language: "Kotlin"
+---
+
+## Introduction
+Kotlin Extensions are a powerful feature in Kotlin that allows you to add new functions to existing classes without modifying their source code. These functions are called extension functions.
+
+```kotlin
+fun String.hasSpaces(): Boolean {
+    return this.contains(" ")
+}
+```
+
+In this example, we’ve added a new function hasSpaces() to the String class. This function checks if the string contains any spaces.
+
+## Using Extension Functions
+You can use extension functions just like any other function in the class. Here’s how you can use the hasSpaces() function:
+
+```kotlin
+val myString = "Hello, World!"
+println(myString.hasSpaces()) // prints: true
+```
+
+## Conclusion
+Kotlin Extensions provide a clean and concise way to add functionality to existing classes. They’re a great tool to have in your Kotlin toolbox!
