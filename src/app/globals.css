@@ -22,6 +22,16 @@ body {
   margin: 15px 15px 15px 15px;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
 h1, h2 {
   font-weight: bold;
   font-size: x-large;

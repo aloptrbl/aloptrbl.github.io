@@ -8,7 +8,9 @@ import Posts from './../../app/components/Posts'
 export default function Home({posts}) {
   return (
 <Layout>
-<Posts posts={posts} />
+  <div className="px-3">
+  <Posts posts={posts} />
+  </div>
     </Layout>
   )
 }
