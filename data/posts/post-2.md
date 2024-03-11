@@ -6,8 +6,6 @@ description: "Dalam Kotlin, inline function memainkan peranan penting dalam meng
 language: "Kotlin"
 ---
 
-## Optimumkan Kotlin code dengan Inline Function
-
 ### Pengenalan
 Dalam Kotlin, inline function memainkan peranan penting dalam mengoptimumkan code performance, terutamanya apabila menggunakan higher order function (lambda). 
 

@@ -8,9 +8,9 @@ export default function Page() {
   return (
     <div>
       <h1 className="text-bold mb-5">Devlog</h1>
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-3">
       {allPosts.map((post) => (
-        <div key={post._id} className="card-bg p-4 rounded-lg shadow-md w-64">
+        <div key={post._id} className="card-bg p-4 rounded-lg shadow-md w-64 pr-3">
           <Link href={`/posts/${post.slug}`}>
             <h6 className="text-red-500 font-semibold text-lg mb-2">
               {post.language}
