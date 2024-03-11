@@ -3,12 +3,19 @@ import Image from "next/image";
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import Layout from '../../app/layout'
-import '../../app/globals.css'
 
 
 export default function About() {
   return (
     <Layout>
+           <div class="flex flex-row mt-3 mb-3 mx-5 justify-center items-center">
+      <Image
+      src={'/computer.png'}
+      width={150}
+      height={150}
+      alt="author"
+    />
+      </div>
 <h1>Introduction</h1>
 <br></br>
 <hr></hr>
@@ -17,7 +24,7 @@ export default function About() {
     <h2>Skills</h2>
     <br></br>
     <hr></hr>
-    <ul className="list-disc px-3">
+    <ul className="list-disc mx-3">
         <li>Kotlin & Jetpack Compose</li>
         <li>Swift & SwiftUI</li>
         <li>React Native</li>
@@ -30,7 +37,7 @@ export default function About() {
     <h2>Tools</h2>
     <br></br>
     <hr></hr>
-    <ul className="list-disc px-3">
+    <ul className="list-disc mx-3">
       <li>Postman</li>
       <li>Android Studio, XCode, VSCode</li>
       <li>Android SDK, Cocoapods, Gradle</li>

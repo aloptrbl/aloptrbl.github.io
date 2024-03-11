@@ -9,7 +9,7 @@ export default function Post({ post }) {
     <Layout className="ml-3">
           <article>
           { post.image && (
-      <div style={{ width: '450px', position: 'relative', height: '150px' }}>
+      <div style={{ width: '350px', position: 'relative', height: '150px' }}>
         <Image src={ImageUrl(post.image)} alt={post.title} layout="fill" objectFit="cover" />
       </div>  
     )}

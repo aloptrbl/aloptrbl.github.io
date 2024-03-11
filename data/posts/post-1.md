@@ -1,7 +1,7 @@
 ---
 title: "Kotlin Extensions: Enhancing Classes"
 publishedAt: 2021-02-04
-image: 'articles/kotlin-extension.jpg'
+image: 'articles/extension.png'
 description: "Kotlin Extensions are a powerful feature in Kotlin that allows you to add new functions to existing classes without modifying their source code. These functions are called extension functions."
 language: "Kotlin"
 ---

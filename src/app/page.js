@@ -20,8 +20,8 @@ export default function Page() {
     />
     <figcaption className={dot.className + " caption xl:text-xl lg:text-lg md:text-md  sm:text-sm"}>&ldquo; I am the wisest man alive, for I know one thing, and that is that I know nothing. &rdquo; Plato</figcaption>
       </div>
-      <h1 className="text-bold pb-5">Devlog</h1>
-      <div className="flex flex-row space-x-4">
+      <h1 className="text-bold">Devlog</h1>
+      <div className="flex flex-row space-x-4 mt-3">
       {allPosts.map((post) => (
         <div key={post._id} className="card-bg p-4 rounded-lg shadow-md w-64 pr-3">
           <Link href={`/posts/${post.slug}`}>
