@@ -2,6 +2,7 @@ import { allPosts } from 'contentlayer/generated'
 import Layout from '../../app/layout'
 import Image from "next/image";
 import {ImageUrl} from '../../utils/index'
+import { marked } from 'marked';
 
 export default function Post({ post }) {
   return (
@@ -15,7 +16,7 @@ export default function Post({ post }) {
       <h1>{post.title}</h1>
       <div>{post.date}</div>
 
-      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+      <div dangerouslySetInnerHTML={{ __html: marked.parse(post.body.raw) }} />
     </article>
     </Layout>
   )
