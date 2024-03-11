@@ -13,19 +13,19 @@ export default function Navbar() {
     <nav className="flex items-center justify-between p-3">
       <div className="text-2xl">
         <Link href="/">
-          <a className={silkscreen.className}>Aloptrbl</a>
+          <a className={silkscreen.className + ""}>Aloptrbl</a>
         </Link>
       </div>
               <div className="mx-auto">
             <Image
-        className="logo"
+        className="logo hidden md:block"
       src="/main.png"
       width={35}
       height={35}
       alt="author"
     />
         </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 items-center">
         <Link href="/">
           <a className=" hover:text-gray-300">Devlog</a>
         </Link>
