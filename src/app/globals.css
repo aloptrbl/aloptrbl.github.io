@@ -76,6 +76,13 @@ a {
     filter: invert(var(--invert));
   }
 
+  .caption {
+    color: rgb(var(--foreground-rgb));
+    font-size:xx-large;
+    font-weight: bolder;
+    font-style: italic;
+  }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
