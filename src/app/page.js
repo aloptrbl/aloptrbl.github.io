@@ -8,6 +8,7 @@ export default function Page() {
   return (
     <div>
       <h1 className="text-bold mb-5">Devlog</h1>
+      <div className="flex flex-row">
       {allPosts.map((post) => (
         <div key={post._id} className="card-bg p-4 rounded-lg shadow-md w-64">
           <Link href={`/posts/${post.slug}`}>
@@ -28,6 +29,7 @@ export default function Page() {
           </Link>
         </div>
       ))}
+      </div>
     </div>
   );
 }
