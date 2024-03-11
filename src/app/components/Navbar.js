@@ -4,13 +4,15 @@ import Image from 'next/image'
 import { Silkscreen } from "next/font/google";
 import "../../app/globals.css";
 import { useTheme } from 'next-themes'
+import { usePathname } from "next/navigation";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname()
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center justify-between px-3 py-2">
       <div>
         <Link href="/">
           <a className={silkscreen.className + " text-2xl"}>Aloptrbl</a>
@@ -27,13 +29,13 @@ export default function Navbar() {
         </div>
       <div className="flex space-x-4 items-center">
         <Link href="/">
-          <a className=" hover:text-red-300">Devlog</a>
+          <a className={pathname == "/" ? "text-red-500" : "" + " hover:text-red-300"}>Devlog</a>
         </Link>
         <Link href="/about">
-          <a className=" hover:text-red-300">About</a>
+          <a className={pathname == "/about" ? "text-red-500" : "" + " hover:text-red-300"}>About</a>
         </Link>
         <Link href="/portfolio">
-          <a className=" hover:text-red-300">Portfolio</a>
+          <a className={pathname == "/portfolio" ? "text-red-500" : "" + " hover:text-red-300"}>Portfolio</a>
         </Link>
         <button className="px-1" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         <Image

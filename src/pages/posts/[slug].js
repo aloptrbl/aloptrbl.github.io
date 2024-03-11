@@ -6,12 +6,10 @@ import { marked } from 'marked';
 
 export default function Post({ post }) {
   return (
-    <Layout className="ml-3">
+    <Layout>
           <article>
           { post.image && (
-      <div style={{ width: '350px', position: 'relative', height: '150px' }}>
-        <Image src={ImageUrl(post.image)} alt={post.title} layout="fill" objectFit="cover" />
-      </div>  
+        <Image src={ImageUrl(post.image)} width={250} height={150} alt={post.title}  />
     )}
       <h1>{post.title}</h1>
       <div>{post.date}</div>

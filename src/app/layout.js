@@ -16,7 +16,9 @@ export default function Layout({ children }) {
       <body className={dot.className}>
       <Providers>
       <Navbar />
+        <div className="px-5">
         {children}
+          </div>
         <Footer />
         </Providers>
         </body>
