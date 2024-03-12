@@ -9,7 +9,7 @@ export default function Post({ post }) {
     <Layout>
           <article>
           { post.image && (
-        <Image src={ImageUrl(post.image)} width={250} height={150} alt={post.title}  />
+        <Image className="banner-logo" src={ImageUrl(post.image)} width={250} height={150} alt={post.title}  />
     )}
       <h1>{post.title}</h1>
       <div>{post.date}</div>
