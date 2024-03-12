@@ -1,0 +1,65 @@
+---
+title: "Strong dan Weak References dalam Swift"
+publishedAt: 2024-04-12
+image: 'articles/weakstrong.png'
+description: "Dalam Swift, kita ada benda yang dipanggil ARC (Automatic Reference Counting). ARC ni macam cleaner yang tolong kemas memori kita. Tapi kadang-kadang, kita tak nak ARC ni kemas sesuka hati dia. So, kita boleh guna strong dan weak references."
+language: "Swift"
+---
+
+# Strong dan Weak References dalam Swift
+
+Dalam Swift, kita ada benda yang dipanggil ARC (Automatic Reference Counting). ARC ni macam cleaner yang tolong kemas memori kita. Tapi kadang-kadang, kita tak nak ARC ni kemas sesuka hati dia. So, kita boleh guna strong dan weak references.
+
+## Strong Reference
+
+Bila kita cipta instance baru untuk class, kita sebenarnya dah buat satu strong reference. Strong reference ni macam pegang kuat-kuat kat instance tu, tak bagi ARC kemas. Contoh macam ni:
+
+```swift
+class Song {
+    var title: String
+    var artist: String
+    weak var playlist: Playlist?
+    
+    init(title: String, artist: String) {
+        self.title = title
+        self.artist = artist
+    }
+}
+
+class Playlist {
+    var name: String
+    var songs: [Song]
+    
+    init(name: String, songs: [Song]) {
+        self.name = name
+        self.songs = songs
+    }
+}
+
+var mySong: Song? = Song(title: "Shape of You", artist: "Ed Sheeran")
+var myPlaylist1: Playlist? = Playlist(name: "My Playlist 1", songs: [mySong!])
+var myPlaylist2: Playlist? = Playlist(name: "My Playlist 2", songs: [mySong!])
+```
+
+Dalam contoh ni, kita dah cipta tiga instances, mySong, myPlaylist1, dan myPlaylist2. mySong ada dua strong references (satu dari myPlaylist1 dan satu lagi dari myPlaylist2), so ARC tak boleh kemas. Bila kita buat strong reference ni, kita sebenarnya tambah +1 kat reference count dia. Jadi, kalau kita tengok reference count:
+
+mySong: 2 (sebab kita assign Song(title: "Shape of You", artist: "Ed Sheeran") ke myPlaylist1 dan myPlaylist2)
+myPlaylist1: 1 (sebab kita assign Playlist(name: "My Playlist 1", songs: [mySong!]) ke myPlaylist1)
+myPlaylist2: 1 (sebab kita assign Playlist(name: "My Playlist 2", songs: [mySong!]) ke myPlaylist2)
+
+## Weak Reference
+Tapi kadang-kadang, kita nak biar ARC kemas juga. Dalam kes ni, kita boleh guna weak reference. Weak reference ni tak cukup kuat untuk halang ARC kemas. Kita guna keyword weak untuk declare weak reference. Yang bestnya, weak reference ni tak tambah reference count. So, bila kita assign nil, ARC boleh terus kemas.
+
+## Deallocate Instances
+Untuk deallocate instance (kemas memori), kita kena assign nil kepada instance tu. Tapi sebab strong reference pegang kuat, instance tu tak akan deallocate sepenuhnya. Contoh macam ni:
+
+```swift
+mySong = nil
+myPlaylist1 = nil
+myPlaylist2 = nil
+```
+
+Walaupun kita dah assign nil, mySong, myPlaylist1, dan myPlaylist2 masih ada sebab ada strong reference yang masih pegang. Jadi, kalau kita tengok reference count:
+mySong: 2 (sebab ada strong reference yang masih pegang)
+myPlaylist1: 1 (sebab ada strong reference yang masih pegang)
+myPlaylist2: 1 (sebab ada strong reference yang masih pegang)
