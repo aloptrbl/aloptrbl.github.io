@@ -2,12 +2,25 @@ import { allPosts } from 'contentlayer/generated'
 import Layout from '../../app/layout'
 import Image from "next/image";
 import {ImageUrl} from '../../utils/index'
-import { marked } from 'marked';
+import { Marked } from 'marked';
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
+import "highlight.js/styles/monokai.css"
+
+const marked = new Marked(
+  markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang, info) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
 
 export default function Post({ post }) {
   return (
     <Layout>
-          <article>
+          <article class="markdown-body">
           { post.image && (
         <Image className="banner-logo" src={ImageUrl(post.image)} width={250} height={150} alt={post.title}  />
     )}

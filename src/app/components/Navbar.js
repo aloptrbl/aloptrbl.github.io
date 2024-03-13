@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Silkscreen } from "next/font/google";
-import "../../app/globals.css";
 import { useTheme } from 'next-themes'
 import { usePathname } from "next/navigation";
 

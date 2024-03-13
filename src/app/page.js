@@ -3,7 +3,6 @@ import Link from "next/link";
 import { DotGothic16 } from "next/font/google";
 import { truncateText } from "@/src/utils";
 import { allPosts } from "contentlayer/generated";
-import "@/src/app/globals.css";
 
 const dot = DotGothic16({ subsets: ["latin"], weight: "400" });
 
